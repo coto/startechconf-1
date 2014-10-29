@@ -1,5 +1,4 @@
-DEVELOPEMENT VERSION (NOT REQUIRED)
------------------------------------
+## Version Tested
 
 ➜  startechconf $ ruby --version
 ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-darwin12.2.0]
@@ -23,16 +22,17 @@ postgres (PostgreSQL) 9.2.1
 git version 1.7.12.4 (Apple Git-37)
 
 
-Requirements
-------------
+## Requirements
+
 Brew:
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+`
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+`
 sudo gem install bundler
 brew install postgres
 
 
-Development
------------
+## Development
 
 $ bundle install
 $ createuser -d -P startechconf
@@ -43,8 +43,7 @@ NOTE: If you have an Socket Error in Postgress: /var/pgsql_socket/.s.PGSQL.5432 
   
   export PGHOST=localhost
   
-Run PostgreSQL
---------------
+## Run PostgreSQL
 
 ➜  Start manually:
 
@@ -54,10 +53,9 @@ pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 
 pg_ctl -D /usr/local/var/postgres stop -s -m fast
 
-Deploy
-------
+## Deploy
 
-Setup inicial (solo la primera vez):
+#### Setup inicial (solo la primera vez):
 
 $ heroku git:remote --app startechconf
 
@@ -65,11 +63,10 @@ $ heroku login
 
 $ heroku keys:add
 
-Luego para hacer Test & Push & Deploy:
+#### Luego para hacer Test & Push & Deploy:
 
 $ rake && git push && rake deploy
 
-Ver pre-registros
-----------------
+## Ver pre-registros
 
 $ heroku run rake preregistros
