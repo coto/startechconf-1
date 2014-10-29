@@ -64,7 +64,12 @@ rake db:create
 rails s
 ```
 
-NOTE: If you have an Socket Error in Postgress: /var/pgsql_socket/.s.PGSQL.5432 add this line to your .bash_profile or .zshrc
+** If you have problems installing Nokogiri
+```
+gem install nokogiri --no-ri --no-rdoc
+```
+
+** NOTE: If you have an Socket Error in Postgress: /var/pgsql_socket/.s.PGSQL.5432 add this line to your .bash_profile or .zshrc
   
   export PGHOST=localhost
   
