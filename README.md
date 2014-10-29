@@ -44,18 +44,6 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 sudo gem install bundler
 brew install postgres
 
-
-## Development
-
-$ bundle install
-$ createuser -d -P startechconf
-$ rake db:create
-$ rails s
-
-NOTE: If you have an Socket Error in Postgress: /var/pgsql_socket/.s.PGSQL.5432 add this line to your .bash_profile or .zshrc
-  
-  export PGHOST=localhost
-  
 ## Run PostgreSQL
 
 ➜  Start manually:
@@ -66,6 +54,21 @@ NOTE: If you have an Socket Error in Postgress: /var/pgsql_socket/.s.PGSQL.5432 
 ```
   pg_ctl -D /usr/local/var/postgres stop -s -m fast
 ```
+
+## Development
+
+```
+bundle install
+createuser -d -P startechconf
+rake db:create
+rails s
+```
+
+NOTE: If you have an Socket Error in Postgress: /var/pgsql_socket/.s.PGSQL.5432 add this line to your .bash_profile or .zshrc
+  
+  export PGHOST=localhost
+  
+
 
 ## Deploy
 
