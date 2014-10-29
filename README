@@ -42,6 +42,17 @@ $ rails s
 NOTE: If you have an Socket Error in Postgress: /var/pgsql_socket/.s.PGSQL.5432 add this line to your .bash_profile or .zshrc
   
   export PGHOST=localhost
+  
+Run PostgreSQL
+--------------
+
+➜  Start manually:
+
+pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+
+➜  Stop manually:
+
+pg_ctl -D /usr/local/var/postgres stop -s -m fast
 
 Deploy
 ------
