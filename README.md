@@ -58,6 +58,7 @@ brew install postgres
 ## Development
 
 ```
+bundle update
 bundle install
 createuser -d -P startechconf
 rake db:create
