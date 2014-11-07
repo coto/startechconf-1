@@ -10,8 +10,8 @@ describe "English Home page", js:true  do
     end
 
     it "changes the page to english" do
-      page.should have_no_text "OCTUBRE"
-      page.should have_text "OCTOBER"
+      page.should have_no_text "El evento de tecnología más"
+      page.should have_text "The greatest tech event in Chile"
     end
   end
 end

@@ -35,7 +35,7 @@ group :development, :test do
   gem 'debugger'
   gem "email_spec", ">= 1.4.0"
   gem "factory_girl_rails", ">= 4.2.0"
-  gem "rspec-rails", ">= 2.12.2"
+  gem "rspec-rails", "= 2.12.2"
 end
 
 group :test do
